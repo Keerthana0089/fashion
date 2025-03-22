@@ -1,16 +1,20 @@
-const mongoose=require('mongoose')
-
-const TshirtDesignSchema=new mongoose.Schema({
-    color:{
-        Type:String,
-        require:true},
-        image:{
-            type:String,
-            required:true },
-        timestamp:{
-            type:Date,
-            default:Date.now},
-});
-
-const TshirtDesign=mongoose.model("TshirtDesign",TshirtDesignSchema);
-module.exports={TshirtDesign}
+const mongoose =require("mongoose");
+const TshirtDesignSchema = new mongoose.Schema({
+    color:
+    {
+        type: String,
+        required: true
+        },
+        image :
+        {
+            type: String,
+            required: true
+            },
+            timestamp :
+            {
+                type: Date,
+                default: Date.now
+                },
+                });
+const TshirtDesign = mongoose.model("TshirtDesign", TshirtDesignSchema);
+ module.exports = {TshirtDesign};

@@ -1,14 +1,7 @@
-const express= require('express')
+const express = require("express");
+const router = express.Router();
+const postTshirtDesignController = require("../Controller/addDesign");
+router.post('/save-design',postTshirtDesignController);
 
-const router=express.Router();
-const postTshirtDesignController =require('./controller/addDesign');
-const SignInController =require('./controller/signIn');
-const LoginInController =require('./controller/login');
-const LogoutController =require('./controller/logout');
-const getDesignController =require('./controller/getdesign');
-router.post("/save-In",SignInController);
-router.post("/save-design",postTshirtDesignController);
-router.post("/login",LoginInController );
-router.post("/logout",LogoutController );
-router.get("/get=design",getDesignController);
-module.exports=router;
+// can import signinpage here if require
+module.exports = router;
